@@ -3,7 +3,10 @@ const Router = express.Router()
 
 const {login , dashbord} = require('../controllers/main')
 
-Router.route('/dashbord').get(dashbord)
+const authMiddleware = require('../middleware/auth')
+
+
+Router.route('/dashbord').get(authMiddleware, dashbord)
 Router.route('/login').post(login)
 
 module.exports = Router
