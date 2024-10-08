@@ -11,7 +11,7 @@ const CustomAPIError = require('../errors/custom-error')
 const login = async(req,res)=>{
     const {username , password} = req.body
     console.log(username,password)
-    //mongo
+    //mongoose validation
     //Joi
     //check in the controller 
 
